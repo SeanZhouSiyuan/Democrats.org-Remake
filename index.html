@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Democrats.org: Change that Matters</title>
+    <!-- Favicon -->
+    <link rel="icon" href="./assets/favicon.ico">
+    <!-- Normalize.css -->
+    <link rel="stylesheet" href="./lib/normalize.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="./lib/font-awesome/css/font-awesome.css">
+    <!-- CSS -->
+    <link rel="stylesheet" href="./assets/style.css">
+</head>
+
+<body>
+    <header>
+        <div class="wrapper">
+            <div class="nav flex wrap middle space-between">
+                <a href="/" class="logo"><span class="logo-txt">民主党</span></a>
+                <div class="nav-buttons flex wrap middle">
+                    <div class="desktop-content social-wrapper">
+                        <div class="social-visible">
+                            <a href="#"><i class="social-btn fa fa-facebook"></i></a>
+                            <a href="#"><i class="social-btn fa fa-twitter"></i></a>
+                        </div>
+                        <div class="social-toggle-box" id="social-toggle-box">
+                            <a href="#"><i class="social-btn fa fa-youtube"></i></a>
+                            <a href="#"><i class="social-btn fa fa-vine"></i></a>
+                            <a href="#"><i class="social-btn fa fa-medium"></i></a>
+                            <a href="#"><i class="social-btn fa fa-instagram"></i></a>
+                            <a href="#"><i class="social-btn fa fa-snapchat-ghost"></i></a>
+                        </div>
+                    </div>
+                    <div class="social-toggle" id="social-toggle">+</div>
+                    <div class="btn-wrapper"><a class="donate-btn" href="#">捐助<span class="desktop-content">我们</span></a></div>
+                </div>
+                <div class="mobile-content social-wrapper" id="social-toggle-box-mobile">
+                    <a href="#"><i class="social-btn fa fa-facebook"></i></a>
+                    <a href="#"><i class="social-btn fa fa-twitter"></i></a>
+                    <a href="#"><i class="social-btn fa fa-youtube"></i></a>
+                    <a href="#"><i class="social-btn fa fa-vine"></i></a>
+                    <br>
+                    <a href="#"><i class="social-btn fa fa-medium"></i></a>
+                    <a href="#"><i class="social-btn fa fa-instagram"></i></a>
+                    <a href="#"><i class="social-btn fa fa-snapchat-ghost"></i></a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div id="content">
+        <div class="banner">
+            <div class="banner-overlay">
+                <div class="banner-text">
+                    <h1 class="banner-title">直播民主党</h1>
+                    <a class="banner-btn" href="#">立即观看</a>
+                </div>
+            </div>
+        </div>
+        <div class="signup">
+            <div class="wrapper flex wrap middle space-between">
+                <div class="signup-title">表明你支持民主党人：</div>
+                <form action="" id="signup-form"></form>
+                <input type="email" name="email" class="email" form="signup-form" placeholder="电子邮件" required pattern="[^@]+@[^@]+\.[a-zA-Z]{2,11}">
+                <input type="text" name="zip" class="zip" form="signup-form" placeholder="美国邮政编码" required pattern="\d{5}-?(\d{4})?">
+                <input type="submit" class="submit" form="signup-form" value="签上我的名字">
+            </div>
+        </div>
+        <div class="action-panel">
+            <div class="wrapper flex wrap space-between">
+                <div class="action">
+                    <div class="action-overlay">
+                        <h2>让特朗普担责</h2>
+                        <h3>表明立场</h3>
+                        <div class="action-bg"></div>
+                    </div>
+                </div>
+                <div class="action">
+                    <div class="action-overlay">
+                        <h2>拨打电话</h2>
+                        <h3>告诉国会共和党人你的立场</h3>
+                        <div class="action-bg"></div>
+                    </div>
+                </div>
+                <div class="action action-donate" id="action-donate">
+                    <div class="action-overlay">
+                        <h2>为前方的战斗出份力</h2>
+                        <div class="donate-grid flex wrap space-between">
+                            <div class="donate-option-wrapper">
+                                <div class="donate-option">$10</div>
+                            </div>
+                            <div class="donate-option-wrapper">
+                                <div class="donate-option">$25</div>
+                            </div>
+                            <div class="donate-option-wrapper">
+                                <div class="donate-option">$50</div>
+                            </div>
+                            <div class="donate-option-wrapper">
+                                <div class="donate-option">$100</div>
+                            </div>
+                            <div class="donate-option-wrapper">
+                                <div class="donate-option">$250</div>
+                            </div>
+                            <div class="donate-option-wrapper">
+                                <div class="donate-option">其他</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="action">
+                    <div class="action-overlay">
+                        <h2>观看</h2>
+                        <h3>民主党直播</h3>
+                        <div class="action-bg"></div>
+                    </div>
+                </div>
+                <div class="action">
+                    <div class="action-overlay">
+                        <h2>商店</h2>
+                        <h3>民主党官方商城</h3>
+                        <div class="action-bg"></div>
+                    </div>
+                </div>
+                <div class="action">
+                    <div class="action-overlay">
+                        <h2>了解</h2>
+                        <h3>我们的新任长官</h3>
+                        <div class="action-bg"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="official"></div>
+        <div class="wrapper flex">
+            <div class="copyright"></div>
+            <div class="footer-nav"></div>
+            <div class="logo"></div>
+        </div>
+    </footer>
+
+    <script src="./assets/app.js"></script>
+</body>
+
+</html>
