@@ -281,12 +281,15 @@ header .mobile-content .social-btn {
   padding: 0 0.4rem;
   margin: 0.5rem 0;
   height: 2.8rem;
+  border: 1px solid #aaa;
+  border-radius: 0;
   font-size: 1.2rem;
 }
 
 #content .signup .submit {
   padding: 0 3rem;
   border: 3px solid #E31818;
+  border-radius: 0;
   margin: 0.5rem 0;
   height: 2.8rem;
   color: #E31818;
@@ -431,6 +434,78 @@ header .mobile-content .social-btn {
   cursor: pointer;
 }
 
+footer {
+  margin-top: 30px;
+  background: #0F2446;
+  color: #fff;
+}
+
+footer a {
+  color: #fff;
+  -webkit-transition: all 0.7s;
+  -moz-transition: all 0.7s;
+  transition: all 0.7s;
+}
+
+footer a:hover {
+  color: #00AEF3;
+}
+
+footer .footer-btn {
+  padding: 0.5rem 1rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+  background: #00AEF3;
+  border: 3px solid #00AEF3;
+}
+
+footer .footer-btn:hover {
+  background: #fff;
+}
+
+footer .official {
+  padding: 10px 0;
+  background: #00AEF3;
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+footer .wrapper {
+  margin-top: 30px;
+}
+
+footer .wrapper > * {
+  flex: 1 100%;
+  margin-bottom: 30px;
+}
+
+footer .copyright {
+  margin-top: 1rem;
+  line-height: 1.8rem;
+}
+
+footer .footer-nav {
+  list-style: none;
+  line-height: 1.8rem;
+}
+
+footer .footer-nav ul {
+  list-style: none;
+}
+
+footer .footer-nav strong {
+  line-height: 2.4rem;
+}
+
+footer .footer-nav-col {
+  flex: 1 50%;
+}
+
+footer .logo {
+  padding-bottom: 30px;
+  text-align: center;
+}
+
 @media (min-width: 769px) {
   body {
     font-size: 18px;
@@ -501,10 +576,22 @@ header .mobile-content .social-btn {
   }
 
   #content .action-panel .action {
-    flex: 1 33.3%;
+    flex: 1 33.33%;
   }
 
   #content .action-donate .donate-option-wrapper {
-    flex: 1 33.3%;
+    flex: 1 33.33%;
+  }
+}
+
+@media (min-width: 769px) {
+  footer .footer-nav-col {
+    flex: 1 33.33%;
+  }
+}
+
+@media (min-width: 1201px) {
+  footer .wrapper > * {
+    flex: 1 50%;
   }
 }
