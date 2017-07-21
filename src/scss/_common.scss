@@ -1,0 +1,18 @@
+@import './variables';
+
+.wrapper { margin: 0 10px; }
+
+a { @include transition(color .7s, background .7s, border .7s); }
+
+.flex { display: flex; }
+.wrap { flex-wrap: wrap; }
+.nowrap { flex-wrap: nowrap; }
+.middle { align-items: center; }
+.space-between { justify-content: space-between; }
+.space-around { justify-content: space-around; }
+.center { justify-content: center; }
+.block { display: block; }
+
+@media (min-width: 769px) {
+    .wrapper { margin: 0 50px; }
+}

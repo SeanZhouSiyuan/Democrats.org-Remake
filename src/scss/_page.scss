@@ -1,0 +1,76 @@
+@import './variables';
+
+section { position: relative; }
+.page {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1200px;
+    .post {
+        margin-bottom: 4rem;
+        &:last-child { margin-bottom: 0; }
+    }
+    .page-main {
+        flex: 1 100%;
+        order: 2;
+        padding: 4rem 0;
+        .page-title, .page-date {
+            color: $primaryColor;
+            text-align: center;
+            line-height: 1.75em;
+        }
+        .page-title {
+            display: block;
+            font-size: 1.75rem;
+            font-weight: bold;
+        }
+        .page-date {
+            margin-top: 0.5rem;
+            font-size: 1.5rem;
+            font-weight: normal;
+        }
+    }
+    .page-main.no-side {
+        flex: 1 100%;
+        padding-right: 0;
+    }
+    .page-side {
+        flex: 1 100%;
+        order: 1;
+        padding: 0 10px;
+        margin: 0 -10px;
+        background: #f6f6f6;
+    }
+    .page-content {
+        p {
+            margin-bottom: 1rem;
+            line-height: 1.75em;
+            text-align: justify;
+        }
+        a { border-bottom: 1px solid $primaryColor; }
+    }
+}
+
+@media (min-width: 769px) {
+    .page {
+        .page-main {
+            flex: 1 70%;
+            order: 1;
+            padding: 5rem 20px 5rem 0;
+        }
+        .page-side {
+            flex: 1 30%;
+            order: 2;
+            padding: 0 0 0 20px;
+            margin: 0;
+            &::before {
+                content: '';
+                position: absolute;
+                right: 0;
+                background: #f6f6f6;
+                height: 100%;
+                width: 20%;
+                z-index: -1;
+            }
+        }
+    }
+}

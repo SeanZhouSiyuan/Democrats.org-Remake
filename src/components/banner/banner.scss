@@ -1,0 +1,25 @@
+.banner {
+    margin-top: 84px;
+    height: 10rem;
+    background: url('/static/images/2016_Pattern_Blue_1200x300.png') center center;
+    background-size: cover;
+    text-align: center;
+    color: #fff;
+    h1 {
+        margin: auto;
+        font-size: 3rem;
+    }
+}
+
+@media (min-width: 769px) {
+    .banner {
+        height: 15rem;
+        h1 { font-size: 4rem; }
+    }
+}
+@media (min-width: 1201px) {
+    .banner {
+        height: 20rem;
+        h1 { font-size: 5rem; }
+    }
+}

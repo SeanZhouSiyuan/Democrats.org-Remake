@@ -1,0 +1,99 @@
+@import '../../scss/variables';
+
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: #fff;
+    z-index: 2;
+    .nav { padding: 1.125rem 0; }
+    .desktop-content { display: none; }
+    .logo {
+        font-size: 2.0rem;
+        font-weight: bold;
+        color: $primaryColor;
+        .logo-img {
+            margin-right: 0.5rem;
+            width: 3rem;
+            height: 3rem;
+        }
+        path {
+            fill: $primaryColor;
+            @include transition(fill .7s);
+        }
+    }
+    .logo:hover {
+        color: $secondaryColor;
+        path { fill: $secondaryColor; }
+    }
+    .social-wrapper {
+        overflow: hidden;
+    }
+    .social {
+        @include transform(translateX(66.6666%));
+        @include transition(transform .7s);
+    }
+    .social.active {
+        @include transform(translateX(0));
+    }
+    .social-icon {
+        margin: 0 0.25rem;
+        text-align: center;
+        font-size: 1.25rem;
+        width: 2.5rem;
+        height: 2.5rem;
+        line-height: 2.5rem;
+        color: #fff;
+        background-color: $secondaryColor;
+        border-radius: 50%;
+        @include transition(color .7s, background .7s);
+    }
+    .social-icon:hover {
+        color: $secondaryColor;
+        background: #fff;
+    }
+    // Toggle button
+    .social-toggle {
+        margin-left: 0.5em;
+        margin-right: 1em;
+        font-size: 2rem;
+        font-weight: 100;
+        cursor: pointer;
+        @include transition(color .7s, transform .7s);
+    }
+    .social-toggle:hover { color: $primaryColor; }
+    .social-toggle.active { @include transform(rotate(45deg)); }
+    // Donate button
+    .donate-btn {
+        padding: 0.375rem 0.75rem;
+        color: #E31818;
+        font-size: 1.25rem;
+        font-weight: bold;
+        border: 3px solid #E31818;
+    }
+    .donate-btn:hover {
+        color: #fff;
+        background: #E31818;
+    }
+    .mobile-content { display: initial; }
+    .mobile-nav {
+        flex: 1 100%;
+        margin-top: 0;
+        height: 0;
+        overflow: hidden;
+        text-align: center;
+        @include transition(margin-top .7s, height .7s);
+    }
+    .mobile-nav.active {
+        margin-top: 10px;
+        height: 6.75rem;
+    }
+    .mobile-nav .social-icon {
+        margin: 10px 5px 0 5px;
+    }
+}
+
+@media (min-width: 769px) {
+    header .mobile-content { display: none; }
+    header .desktop-content { display: initial; }
+}

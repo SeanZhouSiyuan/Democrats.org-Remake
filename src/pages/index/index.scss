@@ -1,0 +1,155 @@
+@import '../../scss/variables';
+
+#content {
+    margin-top: 84px;
+    margin-bottom: 30px;
+    .lead-banner {
+        height: 100%;
+        background: url('/static/images/demslive_banner.png') center 25% no-repeat;
+        background-size: cover;
+    }
+    .banner-overlay {
+        padding: 8rem 10px;
+        height: 100%;
+        background: linear-gradient(135deg, rgba(0, 174, 243, .7), rgba(255, 221, 0, .7));
+    }
+    .banner-text {
+        padding: 50px 0;
+        margin: 0 auto;
+        max-width: 1200px;
+        text-align: center;
+    }
+    .banner-title {
+        margin-bottom: 40px;
+        font-size: 2.75rem;
+        color: #fff;
+    }
+    .banner-btn {
+        padding: 0.5rem 1.25rem;
+        color: #fff;
+        font-size: 1.5rem;
+        font-weight: bold;
+        background: $secondaryColor;
+        border: 3px solid $secondaryColor;
+    }
+    .banner-btn:hover {
+        color: $secondaryColor;
+        background: #fff;
+    }
+
+    .action-panel {
+        margin-top: 30px;
+        color: #fff;
+        .wrapper {
+            margin: 0 -10px;
+        }
+    }
+    .action {
+        flex: 1 100%;
+        padding: 20px;
+        min-height: 340px;
+    }
+    .action:not(.action-donate) {
+        &:hover {
+            .action-overlay { cursor: pointer; }
+            .action-bg { @include transform(scale(1.1, 1.1)); }
+        }
+    }
+    .action-overlay {
+        position: relative;
+        overflow: hidden;
+        padding: 20px;
+        height: 100%;
+        .action-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -1;
+            width: 100%;
+            height: 100%;
+            @include transition(transform .7s);
+        }
+        h2 {
+            margin-bottom: 1rem;
+            font-size: 2rem;
+        }
+        h3 {
+            font-size: 1.5rem;
+            font-weight: normal;
+        }
+    }
+    .action:nth-child(1) {
+        .action-overlay { background: linear-gradient(135deg,rgba(0,12,184,.7),rgba(0,174,243,.7)); }
+        .action-bg {
+            background: url('/static/images/Hold.jpg') 50% 50% no-repeat;
+            background-size: cover;
+        }
+    }
+    .action:nth-child(2) {
+        .action-overlay { background: linear-gradient(45deg,rgba(246,246,246,.7),rgba(0,174,243,.7)); }
+        .action-bg {
+            background: url('/static/images/Photo_CallTool.jpg') 50% 0 no-repeat;
+            background-size: cover;
+        }
+    }
+    .action:nth-child(3) {
+        .action-overlay { background: #0F2446; }
+    }
+    .action:nth-child(4) {
+        .action-overlay { background: linear-gradient(135deg,rgba(0,174,243,.8),rgba(255,221,0,.8)); }
+        .action-bg {
+            background: url('/static/images/dems-live.jpg') 50% 0 no-repeat;
+            background-size: cover;
+        }
+    }
+    .action:nth-child(5) {
+        .action-overlay { background: rgba(0,174,243,.7); }
+        .action-bg {
+            background: url('/static/images/Merch-tile.png') 50% 50% no-repeat;
+            background-size: cover;
+        }
+    }
+    .action:nth-child(6) {
+        .action-overlay { background: linear-gradient(135deg,rgba(15,36,70,.7),rgba(0,174,243,.7)); }
+        .action-bg {
+            background: url('/static/images/officers.jpg') 50% 0 no-repeat;
+            background-size: cover;
+        }
+    }
+    .action-donate {
+        h2 { text-align: center; }
+        .donate-option-wrapper {
+            flex: 1 100%;
+            padding: 15px;
+        }
+        .donate-option {
+            padding: 20px 0;
+            background: $primaryColor;
+            box-shadow: -5px 5px 0 0 #fff;
+            font-size: 1.25rem;
+            text-align: center;
+            @include transition(color .7s, background .7s, box-shadow .7s);
+        }
+        .donate-option:hover {
+            color: $primaryColor;
+            background: #fff;
+            box-shadow: -5px 5px 0 0 $primaryColor;
+            cursor: pointer;
+        }
+    }
+}
+
+@media (min-width: 769px) {
+    #content .banner-text { text-align: left; }
+    #content .banner-overlay { padding: 8rem 50px; }
+
+    #content .action-panel .wrapper { margin: 0 30px; }
+    #content .action-panel .action { flex: 1 50%; }
+    #content .action-donate .donate-option-wrapper { flex: 1 50%; }
+}
+@media (min-width: 1201px) {
+    #content .action-overlay h2 { font-size: 2.25rem; }
+    #content .action-overlay h3 { font-size: 1.5rem; }
+    #content .action-panel .action { flex: 1 33.33%; }
+    #content .action-donate .donate-option-wrapper { flex: 1 33.33%; }
+}

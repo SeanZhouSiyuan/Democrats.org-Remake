@@ -1,0 +1,19 @@
+@import '../../scss/variables';
+
+.party-assets > * {
+    flex: 1 100%;
+    margin-top: 2rem;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+    color: $primaryColor;
+    &:hover { color: $secondaryColor; }
+}
+
+@media (min-width: 769px) {
+    .party-assets > * {
+        flex: 1 50%;
+        margin-top: 2.5rem;
+        font-size: 3rem;
+    }
+}

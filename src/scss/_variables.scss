@@ -1,0 +1,19 @@
+$primaryFontFamily: Lato,Helvetica,微软雅黑,"Microsoft YaHei",sans-serif;
+$primaryFontSize: 16px;
+$primaryColor: #00AEF3;
+$secondaryColor: #0F2446;
+
+@mixin transition($transitions...) {
+    -webkit-transition: $transitions;
+    -moz-transition: $transitions;
+    -o-transition: $transitions;
+    transition: $transitions;
+}
+
+@mixin transform($transforms...) {
+    -webkit-transform: $transforms;
+    -moz-transform: $transforms;
+    -ms-transform: $transforms;
+    -o-transform: $transforms;
+    transform: $transforms;
+}
